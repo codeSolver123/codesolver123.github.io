@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Resume | Alex Anderson</title>
+<meta content="Resume of Alex Anderson, electrical engineer." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Same tokens as index.html so the resume page reads as part of the portfolio. */
+:root{
+  --paper:#f4f6f5;
+  --sheet:#ffffff;
+  --ink:#14211c;
+  --muted:#5b6a64;
+  --rule:#d5ddd9;
+  --mask:#17694a;
+  --copper:#b8692e;
+  --f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0e1513;--sheet:#141d1a;--ink:#e3ebe7;--muted:#97a7a0;--rule:#2a3733;
+  --mask:#4fbf8d;--copper:#e0965a;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0e1513;--sheet:#141d1a;--ink:#e3ebe7;--muted:#97a7a0;--rule:#2a3733;
+  --mask:#4fbf8d;--copper:#e0965a;color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--f-body);
+  display:flex;flex-direction:column;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--mask);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--mask);outline-offset:3px;border-radius:2px}
+
+/* ---------- toolbar ---------- */
+.bar{width:100%;max-width:1040px;margin:0 auto;padding-block:20px 16px;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 20px;
+  border-bottom:2px solid var(--ink)}
+h1{margin:0;font:800 clamp(28px,5vw,40px)/1.08 var(--f-display);font-stretch:118%;letter-spacing:-.02em}
+h1 span{display:block;font-size:.45em;font-weight:600;font-stretch:100%;letter-spacing:0;color:var(--mask);margin-top:6px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;font:14px/1.5 var(--f-mono)}
+.actions a{text-decoration:none}.actions a:hover{text-decoration:underline}
+.resume-link{display:inline-block;background:var(--mask);color:var(--sheet)!important;padding:10px 15px;border-radius:4px;font-weight:600;text-align:center}
+.resume-link:hover{filter:brightness(1.12);text-decoration:none!important}
+.resume-link:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+
+/* ---------- PDF preview ---------- */
+.viewer{flex:1;width:100%;max-width:1040px;margin:16px auto 24px;min-height:70vh;
+  background:var(--sheet);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.viewer object{display:block;width:100%;height:100%;min-height:70vh;border:0}
+.fallback{padding:32px 20px;text-align:center;display:grid;gap:12px;justify-items:center}
+.fallback p{margin:0;color:var(--muted);max-width:44ch}
+</style>
+</head>
+<body>
+<header class="bar">
+<h1>Alex Anderson<span>Resume</span></h1>
+<nav class="actions" aria-label="Resume actions">
+<a href="index.html">← Portfolio</a>
+<a href="Alexander_Anderson_Resume.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+<a class="resume-link" download="Alexander_Anderson_Resume.pdf" href="Alexander_Anderson_Resume.pdf">↓ Download resume (PDF)</a>
+</nav>
+</header>
+<main class="viewer">
+<object data="Alexander_Anderson_Resume.pdf" type="application/pdf" aria-label="Alex Anderson resume (PDF)">
+<!-- Shown where the browser can't preview PDFs inline (most phones). -->
+<div class="fallback">
+<p>Your browser can't preview the PDF here.</p>
+<a class="resume-link" download="Alexander_Anderson_Resume.pdf" href="Alexander_Anderson_Resume.pdf">↓ Download resume (PDF)</a>
+<a href="Alexander_Anderson_Resume.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+</div>
+</object>
+</main>
+</body>
+</html>
