@@ -111,7 +111,31 @@ footer{border-top:1px solid var(--rule);padding-top:20px;display:flex;flex-wrap:
 
 /* Portfolio enhancements */
 html{scroll-padding-top:20px} body{margin:0;overflow-wrap:anywhere} img{max-width:100%} .resume-link{display:inline-block;background:var(--mask);color:var(--sheet)!important;padding:10px 15px;border-radius:4px;font-weight:600;text-align:center} .resume-link:hover{filter:brightness(1.12);text-decoration:none!important} .resume-link:focus-visible{outline:3px solid var(--copper);outline-offset:3px} .sheet{overflow:hidden} .diagram{max-width:100%} .diagram svg{min-width:0} @media(max-width:600px){.wrap{padding-block:24px 48px;gap:32px}.intro p{font-size:17px}.sheet-head h2{overflow-wrap:anywhere}.specs{grid-template-columns:repeat(2,minmax(0,1fr))}.spec{padding:12px}.spec .v{font-size:17px}.diagram{padding:8px}.diagram svg{min-width:520px}.diagram{overflow-x:auto}.contact{width:100%}}
-.skip-link{position:absolute;top:-100px;left:16px;background:var(--sheet);padding:8px;z-index:10}.skip-link:focus{top:8px}</style>
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--sheet);padding:8px;z-index:10}.skip-link:focus{top:8px}
+/* Portfolio design review: editorial hierarchy and responsive polish */
+.wrap{max-width:1120px;gap:44px}
+header{padding:32px clamp(20px,4vw,46px);border:1px solid var(--rule);border-top:5px solid var(--mask);border-radius:14px;background:var(--sheet)}
+.namerow{align-items:center}
+h1{font-size:clamp(48px,7.5vw,92px);letter-spacing:-.045em}
+h1 span{font-size:clamp(16px,2.1vw,23px);line-height:1.35;letter-spacing:0}
+.contact{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 12px;max-width:400px;text-align:left}
+.contact a{padding:8px 11px;border:1px solid var(--rule);border-radius:6px}
+.contact a:hover{border-color:var(--mask)}
+.contact span{width:100%;text-align:right;color:var(--muted)}
+.intro{gap:42px}
+.intro p{font-size:clamp(18px,2vw,21px);line-height:1.65}
+.toc{border-top:2px solid var(--ink)}
+.toc a{padding:12px 8px}
+.toc a:hover{background:var(--paper)}
+.sheet{border-radius:12px;box-shadow:0 10px 30px rgba(15,35,25,.045)}
+.sheet-head{padding-top:34px;padding-bottom:26px}
+.sheet-head h2{letter-spacing:-.025em}
+.specs{background:var(--paper)}
+.spec .v{color:var(--mask)}
+figure img{border-radius:8px}
+.tags span{border-radius:20px;background:var(--paper)}
+@media(max-width:760px){header{padding:24px 18px}.contact{justify-content:flex-start;max-width:none}.contact span{text-align:left}.intro{gap:24px}.wrap{gap:30px}.sheet{border-radius:8px}}
+</style>
 <style>html,body{max-width:100%;overflow-x:clip}img,svg{max-width:100%}.diagram{max-width:100%}.contact a:first-child{display:inline-block;border:1px solid var(--mask);padding:7px 12px;border-radius:3px;font-weight:600}@media(max-width:760px){.wrap{min-width:0}.sheet,.sheet-body,.cols,.intro{min-width:0}.diagram svg{min-width:0;width:100%}}</style></head>
 <body><a class="skip-link" href="#biotronik">Skip to projects</a>
 <div class="wrap">
